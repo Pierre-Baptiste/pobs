@@ -20,7 +20,7 @@ const Item = ({
     imageUrl: string
 }) => {
     return (
-        <div>
+        <div className="z-0">
             <div className="relative h-44">
                 <Image src={imageUrl} className="object-cover" layout="fill" alt="" />
             </div>
@@ -34,7 +34,7 @@ const Home: NextPage<{ posts: Array<Post> }> = ({ posts }) => {
     return (
         <div className="">
             <main>
-                <div className="fixed top-0 z-10 flex h-20 w-full items-center justify-between bg-white px-4">
+                <div className="fixed top-0 z-20 flex h-20 w-full items-center justify-between bg-white px-4">
                     <div className="font-sans text-4xl font-black tracking-tighter">POBS</div>
                     <div className="font-mono text-xl tracking-wide">Design Studio</div>
                 </div>
@@ -46,15 +46,15 @@ const Home: NextPage<{ posts: Array<Post> }> = ({ posts }) => {
                         alt=""
                     />
                 </figure>
-                <div className="sticky top-12 flex flex-wrap items-end border-b border-black bg-white px-4 pt-8 pb-1 font-mono font-light uppercase tracking-tighter text-gray-600">
+                <div className="sticky top-12 z-10 flex flex-wrap items-end border-b border-black bg-white px-4 pt-8 pb-1 font-mono font-light uppercase tracking-tighter text-gray-600">
                     <span className="w-1/4">travaux</span>
                     <span className="w-1/4">2022</span>
                     <span className="w-1/2 text-right">
                         43°17&apos;49.02&quot;N 5°22&apos;51.85&quot;E
                     </span>
                 </div>
-                <div className="z-100 bg-white pb-96">
-                    <div className="mx-4 grid grid-cols-5 gap-8 bg-white pt-8">
+                <div className="z-100 z-0 bg-white pb-96">
+                    <div className="mx-4 grid grid-cols-1 gap-8 bg-white pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                         {(posts || []).map((post) => (
                             <Item
                                 key={post.slug}
