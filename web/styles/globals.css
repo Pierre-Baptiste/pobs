@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.intro-fade-out {
+	-webkit-animation:fadeOut .6s cubic-bezier(.77,0,.18,1) forwards;
+	animation:fadeOut .6s cubic-bezier(.77,0,.18,1) forwards;
+	-webkit-animation-delay:1.4s;
+	animation-delay:1.4s
+ }
+
+ @-webkit-keyframes fadeOut {
+	0% {
+	 opacity:100%
+	}
+	to {
+	 opacity:0
+	}
+ }
+ @keyframes fadeOut {
+	0% {
+	 opacity:100%
+	}
+	to {
+	 opacity:0
+	}
+ }
