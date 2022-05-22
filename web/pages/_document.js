@@ -14,7 +14,7 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html>
+            <Html lang="fr">
                 <Head>
                     <meta name="author" content="Pierre-Baptiste Dupire" />
                     <meta name="description" content={this.props.description} />
