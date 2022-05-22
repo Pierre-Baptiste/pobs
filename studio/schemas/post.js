@@ -29,6 +29,16 @@ export default {
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          title: "Alt",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
     },
     {
       name: "categories",
@@ -51,13 +61,12 @@ export default {
   preview: {
     select: {
       title: "title",
-      author: "author.name",
       media: "mainImage",
+      subtitle: "subtitle",
     },
     prepare(selection) {
-      const { author } = selection;
       return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
+        subtitle: selection.subtitle,
       });
     },
   },
