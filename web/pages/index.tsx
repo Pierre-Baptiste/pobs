@@ -51,9 +51,8 @@ const Home: NextPage<{
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
             <main>
-                <div className="fixed top-0 z-20 flex h-20 w-full items-center justify-between bg-white px-4">
+                <div className="fixed top-0 z-20 flex h-20 w-full items-center bg-white px-4">
                     <p className="font-sans text-4xl font-black tracking-tighter">POBS</p>
-                    <p className="font-mono text-xl tracking-wide">Design Studio</p>
                 </div>
                 <figure className="sticky top-20 -z-10 mb-20 h-hero">
                     <Image
